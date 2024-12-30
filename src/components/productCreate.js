@@ -5,11 +5,11 @@ const ProductCreate = ({ onCreateProduct }) => {
     const initialState = {
         nama: "",
         deskripsi: "",
-        image: "",
+        imageURL: "",
     };
     const [showForm, setShowForm] = useState(false);
     const [formData, setFormData] = useState(initialState);
-    const { nama, deskripsi, image } = formData;
+    const { nama, deskripsi, imageURL } = formData;
 
     const handleShow = () => {
         setShowForm(!showForm);
@@ -62,8 +62,8 @@ const ProductCreate = ({ onCreateProduct }) => {
                             type="text"
                             className="add-input-text"
                             placeholder="Gambar produk"
-                            name="image"
-                            value={image}
+                            name="imageURL"
+                            value={imageURL}
                             onChange={handleChange}
                         />
                     </div>

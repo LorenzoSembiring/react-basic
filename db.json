@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "nama": "Ford",
+      "deskripsi": "Mobil ford adalah mobil yang sangat bagus",
+      "imageURL": "https://images.unsplash.com/photo-1551830820-330a71b99659?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTQ2MDgwOQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080"
+    },
+    {
+      "id": "2",
+      "nama": "Mustang",
+      "deskripsi": "Mobil Mustang mempunyai desain yang elegan",
+      "imageURL": "https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTMyMzE1OA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080"
+    },
+    {
+      "id": "3",
+      "nama": "Toyota",
+      "deskripsi": "Mobil toyota memiliki interior dan body yang kokoh",
+      "imageURL": "https://images.unsplash.com/photo-1559416523-140ddc3d238c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY5MDE0MjIxNg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080"
+    },
+    {
+      "nama": "Lamborghini baru",
+      "deskripsi": "Mobil Lamborghini memiliki interior dan body yang kokoh",
+      "image": "https://images.unsplash.com/photo-1621135802920-133df287f89c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4NjA0MjYyNw&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080",
+      "id": "4"
+    },
+    {
+      "nama": "Yaris",
+      "deskripsi": "Toyota yaris2",
+      "image": "https://auto2000.co.id/c/mobil-baru-toyota/_next/image?url=https%3A%2F%2Fmedias.auto2000.co.id%2Fsys-master-hybrismedia%2Fh05%2Fh86%2F8846786625566%2F4-black-%2B-super-white-ii_optimized.png&w=1024&q=75",
+      "id": "33d1"
+    }
+  ]
+}

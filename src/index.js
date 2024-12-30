@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import ProductList from "./components/productList";
 import Perkenalan from "./components/perkenalan";
@@ -6,7 +6,7 @@ import CounterState from "./components/counterState";
 import Form from "./components/form";
 import Products from "./data/product";
 import ProductCreate from "./components/productCreate";
-
+import { fetchProductsApi, createProductApi, updateProductApi, deleteProductApi } from "./api/productApi";
 const element = document.getElementById("root");
 const root = ReactDOM.createRoot(element);
 
@@ -17,11 +17,20 @@ const App = () => {
     //     setNama(data.nama);
     // };
 
-    const [products, setProducts] = useState(Products);
-    const onEditProduct = (id, data) => {
+    const [products, setProducts] = useState([]);
+    const fetchProducts = async () => {
+        const response = await fetchProductsApi()
+        setProducts(response.data)
+
+    }
+    useEffect(() => {
+        fetchProducts()
+    }, [])
+    const onEditProduct = async (id, data) => {
+        const response = updateProductApi(id, data)
         const updatedProduct = products.map((prod) => {
             if (prod.id === id) {
-                return { ...prod, ...data };
+                return { ...prod, ...response.data };
             }
             return prod;
         });
@@ -30,14 +39,16 @@ const App = () => {
     };
 
 
-    const onCreateProduct = (product) => {
+    const onCreateProduct = async (product) => {
+        const response = await createProductApi(product)
+        console.log(response)
         setProducts([
-            ...products,
-            { id: Math.round(Math.random() * 123122), ...product },
+            ...products, response.data,
         ]);
     };
 
-    const onDeleteProduct = (id) => {
+    const onDeleteProduct = async (id) => {
+        await deleteProductApi(id)
         const updatedProduct = products.filter((prod) => {
             return prod.id != id;
         });
